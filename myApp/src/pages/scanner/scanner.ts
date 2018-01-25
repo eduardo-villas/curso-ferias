@@ -11,7 +11,6 @@ import { IonicPage } from 'ionic-angular';
 export class ScannerPage {
 
   constructor(public navCtrl: NavController) {
-    console.log('oi');
   }
 
   changeView() : void {

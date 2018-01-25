@@ -10,18 +10,17 @@ import { IonicPage } from 'ionic-angular';
 export class HomePage {
 
   constructor(public navCtrl: NavController) {
-    console.log('oi');
   }
 
   goToProfilePage() : void {
-    this.navCtrl.push("ProfilePage")
+    this.navCtrl.push('ProfilePage');
   }
   
   goToReportPage() : void {
-    this.navCtrl.push("ReportPage")
+    this.navCtrl.push('ReportPage');
   }
 
   goToScannerPage() : void {
-    this.navCtrl.push("ScannerPage")
+    this.navCtrl.push('ScannerPage');
   }
 }

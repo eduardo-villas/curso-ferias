@@ -3,8 +3,8 @@ import { NavController } from 'ionic-angular';
 
 import { IonicPage } from 'ionic-angular';
 
-import { ToastController } from 'ionic-angular';
 import { Profile } from './profile.model';
+import { ToastService } from '../../providers/toast.service';
 
 @IonicPage()
 @Component({
@@ -13,10 +13,10 @@ import { Profile } from './profile.model';
 })
 export class ProfilePage {
 
-  properties : Profile[] = [{name: 'teste1'}, {name: 'teste2'}];
+  properties : Profile = new Profile();
 
-  constructor(public navCtrl: NavController, private toastCtrl: ToastController) {
-    console.log('oi');
+  constructor(public navCtrl: NavController, private toastService: ToastService) {
+    
   }
 
   changeView() : void {
@@ -24,16 +24,6 @@ export class ProfilePage {
   }
 
   showToast() : void {
-    let toast = this.toastCtrl.create({
-      message: 'O usuário clicou na foto do perfil. Carregar imagem(suporte do cordova necessário)',
-      duration: 3000,
-      position: 'middle'
-    });
-    toast.onDidDismiss(() => {
-      console.log('estes executado quando esconde o toast');
-    });
-
-    toast.present();
-
+    this.toastService.create('O usuário clicou na foto do perfil. Carregar imagem(suporte do cordova necessário)');
   }
 }

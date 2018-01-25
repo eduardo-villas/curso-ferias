@@ -21,6 +21,7 @@ import { MODULES, NATIVEPROVIDERS, NATIVEMODULES, PROVIDERS } from './app.import
   ],
   providers: [
     NATIVEPROVIDERS,
+    PROVIDERS,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })

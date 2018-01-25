@@ -11,7 +11,6 @@ import { IonicPage } from 'ionic-angular';
 export class ReportPage {
 
   constructor(public navCtrl: NavController) {
-    console.log('oi');
   }
 
   changeView() : void {

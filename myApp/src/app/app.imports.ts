@@ -9,6 +9,7 @@ import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 
 //PROVIDERS
+import { ToastService } from '../providers/toast.service'
 
 //NATIVEPROVIDERS
 import { StatusBar } from '@ionic-native/status-bar';
@@ -31,7 +32,7 @@ export const NATIVEMODULES = [
 ];
 
 export const PROVIDERS = [
-
+    ToastService
 ];
 
 export const NATIVEPROVIDERS = [
