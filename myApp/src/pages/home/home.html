@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Home</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  
+  <ion-list>
+    <ion-row (click)="goToProfilePage()">
+      <ion-item>
+        <ion-label><ion-icon name="person"></ion-icon>&nbsp;Perfil</ion-label>
+      </ion-item>
+    </ion-row>
+    
+    <ion-row (click)="goToScannerPage()" class="botao">
+      <ion-item>
+        <ion-label><ion-icon name="qr-scanner"></ion-icon>&nbsp;Scanner</ion-label>
+      </ion-item>
+    </ion-row>
+    
+    <ion-row (click)="goToReportPage()">
+      <ion-item>
+        <ion-label><ion-icon name="document"></ion-icon>&nbsp;Relatório</ion-label>
+      </ion-item>
+    </ion-row>
+    
+  </ion-list>
+  
+</ion-content>
