@@ -45,5 +45,6 @@ export class HomePage {
     ).catch( reason => {
       console.log('aaaa');
     });
+    console.log('showErrorCallBack');
   }
 }

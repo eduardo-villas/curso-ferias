@@ -12,7 +12,7 @@
     
     <ion-col col-4>
       <ion-item no-lines>
-        <ion-img src="../../assets/imgs/male-profile-picture.png" (click)="changeView()"></ion-img>
+        <ion-img [src]="imgUrl || imgUrlDefaul" (click)="changeView()"></ion-img>
       </ion-item>
     </ion-col>
     

@@ -29,7 +29,8 @@ export class AlertServiceProvider {
     }
 
     showAlertWithCallback(title: string, message: string) : Promise<boolean> {
-        return new Promise((resolve, reject) => {
+        
+        var promise : Promise<boolean> = new Promise((resolve, reject) => {
             
             const confirm = this.alertController.create(
                 {
@@ -59,6 +60,8 @@ export class AlertServiceProvider {
 
             confirm.present();
         } );
+        
+        return promise;
     }
 
 }
