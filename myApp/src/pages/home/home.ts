@@ -37,9 +37,9 @@ export class HomePage {
     promise.then(
       (res) => {
         if (res) {
-          console.log('res true' );
+          this.alertService.showAlert('Promessa', 'titulo', 'apertou o yes');
         } else {
-          console.log('res false' );
+          this.alertService.showAlert('Promessa', 'titulo', 'apertou o cancel');
         }
       }
     ).catch( reason => {

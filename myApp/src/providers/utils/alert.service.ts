@@ -39,14 +39,18 @@ export class AlertServiceProvider {
                         text: 'Cancel',
                         role: 'cancel',
                         handler: () => {
-                            confirm.dismiss().then(res => resolve(false))
+                            confirm.dismiss().then(res => {
+                                resolve(false);
+                            })
                             return false;
                         }
                     },
                     {
                         text: 'Yes',
                         handler: () => {
-                            confirm.dismiss().then(res => resolve(true))
+                            confirm.dismiss().then(res => {
+                                resolve(true);
+                            })
                             return false;
                         }
                     }]
