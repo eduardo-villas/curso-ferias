@@ -4,7 +4,7 @@ import { NavController } from 'ionic-angular';
 import { IonicPage } from 'ionic-angular';
 
 import { Profile } from './profile.model';
-import { ToastService } from '../../providers/toast.service';
+import { ToastServiceProvider } from '../../providers/utils/toast.service';
 
 @IonicPage()
 @Component({
@@ -15,7 +15,7 @@ export class ProfilePage {
 
   properties : Profile = new Profile();
 
-  constructor(public navCtrl: NavController, private toastService: ToastService) {
+  constructor(public navCtrl: NavController, private toastService: ToastServiceProvider) {
     
   }
 

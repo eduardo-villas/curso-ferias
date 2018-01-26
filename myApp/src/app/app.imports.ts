@@ -5,11 +5,10 @@ import { ReportPageModule } from '../pages/report/report.module';
 
 //NATIVEMODULES
 import { BrowserModule } from '@angular/platform-browser';
-import { ErrorHandler, NgModule } from '@angular/core';
-import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 
 //PROVIDERS
-import { ToastService } from '../providers/toast.service'
+import { ToastServiceProvider } from '../providers/utils/toast.service';
+import { AlertServiceProvider } from '../providers/utils/alert.service';
 
 //NATIVEPROVIDERS
 import { StatusBar } from '@ionic-native/status-bar';
@@ -32,7 +31,8 @@ export const NATIVEMODULES = [
 ];
 
 export const PROVIDERS = [
-    ToastService
+    ToastServiceProvider,
+    AlertServiceProvider
 ];
 
 export const NATIVEPROVIDERS = [
