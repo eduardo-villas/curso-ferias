@@ -7,6 +7,14 @@
         {
             "type": "chrome",
             "request": "launch",
+            "name": "attach emulator",
+            "url": "192.168.223.102:5555",
+            "webRoot": "${workspaceFolder}/src/",
+            "sourceMaps": true
+        },
+        {
+            "type": "chrome",
+            "request": "launch",
             "name": "Launch Chrome",
             "url": "http://localhost:8100",
             "webRoot": "${workspaceFolder}/src/",

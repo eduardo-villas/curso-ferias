@@ -14,17 +14,17 @@ export class HomePage {
   }
 
   goToProfilePage() : void {
-    this.alertService.showAlert('Mudanca de pagina', 'ProfilePage');
+   // this.alertService.showAlert('Mudanca de pagina', 'ProfilePage');
     this.navCtrl.push('ProfilePage');
   }
   
   goToReportPage() : void {
-    this.alertService.showAlert('Mudanca de pagina', 'ReportPage');
+  //  this.alertService.showAlert('Mudanca de pagina', 'ReportPage');
     this.navCtrl.push('ReportPage');
   }
 
   goToScannerPage() : void {
-    this.alertService.showAlert('Mudanca de pagina', 'ScannerPage');
+  //  this.alertService.showAlert('Mudanca de pagina', 'ScannerPage');
     this.navCtrl.push('ScannerPage');
   }
 

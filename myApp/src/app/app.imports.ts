@@ -14,6 +14,7 @@ import { IonicStorageModule } from '@ionic/storage';
 import { Camera } from '@ionic-native/camera';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
+import { BarcodeScanner } from '@ionic-native/barcode-scanner';
 
 //PROVIDERS
 import { AlertServiceProvider } from '../providers/utils/alert.service';
@@ -42,5 +43,6 @@ export const PROVIDERS = [
 export const NATIVEPROVIDERS = [
     StatusBar,
     SplashScreen,
-    Camera
+    Camera,
+    BarcodeScanner
 ];
