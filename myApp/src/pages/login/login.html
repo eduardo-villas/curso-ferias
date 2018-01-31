@@ -8,46 +8,24 @@
 </ion-header>
 <ion-content padding>
   
-  <!--
   <ion-row>
-    <ion-col col-4>
-      <ion-item>
-        <ion-img  src="../../assets/imgs/male-profile-picture.png" (click)="changeView()"></ion-img>
-      </ion-item>
-    </ion-col>
-    
-    <ion-col col-8>
-      <ion-item>
-        <ion-input type="text" placeholder="Nome"></ion-input>
-      </ion-item>
-    </ion-col>
-    
-  </ion-row>
-  
-  <ion-list>
-    <ion-item>
-      
+    <ion-item no-lines>
+      <ion-label>Login</ion-label>
     </ion-item>
-  </ion-list>
-    
-    <form name="signup">
-      <ion-list>
-        <div class="row">
-          <div class="col">
-            <label class="item item-input">
-              <input placeholder="Identificación" name="identificacion" type="text"  required>
-            </label>
-          </div>
-          <div class="col">
-            <label class="item item-input item-select" name="tipo_id" >
-              <div class="input-label">Tipo de Identificación</div>
-              <select >
-                <option ng-repeat="tipo in defaultTipo" value="tipoid" ng-selected="">opcao</option>
-              </select>
-            </label>
-          </div>
-        </div>
-      </ion-list>
-    </form>
-  -->
+    <ion-item>
+      <ion-input type="text" placeholder="login" [(ngModel)]="loginForm.login" ></ion-input>
+    </ion-item>
+  </ion-row>
+  <ion-row>
+    <ion-item no-lines>
+      <ion-label>Senha</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-input type="text" placeholder="senha" [(ngModel)]="loginForm.senha" ></ion-input>
+    </ion-item>
+  </ion-row>
+
+  <button ion-button color="default" (click)="login(loginForm)">login</button>
+  
+  
 </ion-content>
