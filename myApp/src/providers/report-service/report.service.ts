@@ -4,7 +4,7 @@ import { Injectable } from '@angular/core';
 import { Storage } from '@ionic/storage';
 import { Observable } from 'rxjs/Observable';
 import { isUndefined } from 'ionic-angular/util/util';
-import { TOKEN, CURRENT_USER } from '../utils/constants';
+import { TOKEN, CURRENT_USER, URI_BASE } from '../utils/constants';
 // import { RequestOptions } from '@angular/http/src/base_request_options';
 
 @Injectable() 
@@ -29,7 +29,7 @@ export class ReportServiceProvider {
         public getData(id, disciplinas: Array<any>): Promise<Array<any>> {
             
             return new Promise((resolve, reject) => {
-                const uri = 'https://curso-ferias.herokuapp.com';
+                const uri = URI_BASE;
                 let headers = new Headers({'Content-Type': 'application/x-www-form-urlencoded'});
                 let options = new RequestOptions({headers:headers});
                 this.http.get(`${uri}/presenca?usuario=${id}&disciplina=${disciplinas[0]}`, options)
@@ -46,7 +46,7 @@ export class ReportServiceProvider {
                                 detail: 'Presenças: 0',
                                 logo: 'logo-angular',
                                 icon: 'ios-add-circle-outline', 
-                                showDetail: true
+                                showDetail: false
                             },
                             {
                                 title: 'Ionic',
@@ -58,7 +58,7 @@ export class ReportServiceProvider {
                             {
                                 title: 'Rest',
                                 detail: 'Presenças: 0',
-                                logo: '',
+                                logo: 'logo-chrome',
                                 icon: 'ios-add-circle-outline', 
                                 showDetail: false
                             }]);

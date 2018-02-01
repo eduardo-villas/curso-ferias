@@ -14,6 +14,10 @@ export class UserServiceProvider {
         
     }
     
+    public setToken(token) {
+        localStorage.setItem(TOKEN, token);
+    }
+
     public getToken() : any {
         return localStorage.getItem(TOKEN);
     }

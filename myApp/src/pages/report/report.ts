@@ -24,13 +24,13 @@ export class ReportPage implements OnInit {
   constructor(public navCtrl: NavController, 
     private userService: UserServiceProvider, 
     private alertService: AlertServiceProvider,
-    private reportService: ReportServiceProvider) {
-    }
+    private reportService: ReportServiceProvider) {}
     
-    ngOnInit() : void {
+  ngOnInit() : void {
       let user = this.userService.getCurrentUser().then(
         res => {
-          this.reportService.getData(5, [1,2,3]).then(itens => {
+          console.log(res);
+          this.reportService.getData(res.id, [1,2,3]).then(itens => {
             console.log(itens);
             this.itens = itens;
           }).catch(reason => this.alertService.showError('Erro '+reason));
@@ -40,6 +40,15 @@ export class ReportPage implements OnInit {
       
     }
     
+    showDetail(item) : void {
+      item.showDetail = !item.showDetail;
+      if (item.showDetail) {
+        item.icon = 'ios-remove-circle-outline';
+      } else {
+        item.icon = 'ios-add-circle-outline';
+      }
+    }
+
     print() : void {
       this.navCtrl.push('PrintPage');
     }

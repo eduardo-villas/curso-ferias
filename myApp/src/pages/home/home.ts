@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { IonicPage } from 'ionic-angular';
 import { AlertServiceProvider } from '../../providers/utils/alert.service';
+import { AuthServiceProvider } from '../../providers/auth-service/auth.service';
 
 @IonicPage()
 @Component({
@@ -10,7 +11,13 @@ import { AlertServiceProvider } from '../../providers/utils/alert.service';
 })
 export class HomePage {
 
-  constructor(public navCtrl: NavController, private alertService: AlertServiceProvider) {
+  constructor(public navCtrl: NavController, 
+    private alertService: AlertServiceProvider,
+    private authService: AuthServiceProvider) {
+    this.authService.isAutorized();
+    if (!this.authService.isAutorized()) {
+      this.navCtrl.setRoot('LoginPage');
+    }
   }
 
   goToProfilePage() : void {

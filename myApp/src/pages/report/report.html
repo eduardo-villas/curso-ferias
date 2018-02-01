@@ -9,7 +9,7 @@
 <ion-content padding>
   
   <ion-card *ngFor="let item of itens">
-    <ion-card-header>
+    <ion-card-header (click)="showDetail(item)">
       <ion-item padding>
         <ion-icon [name]="item.logo" item-start></ion-icon>
         <ion-label>{{item.title}}</ion-label>

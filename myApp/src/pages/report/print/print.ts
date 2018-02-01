@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { NavController, NavParams } from 'ionic-angular';
 
 import { IonicPage } from 'ionic-angular';
 
@@ -10,7 +10,10 @@ import { IonicPage } from 'ionic-angular';
 })
 export class PrintPage {
 
-  constructor(public navCtrl: NavController) {
+  constructor(public navCtrl: NavController, public navParams: NavParams) {
+    if (navParams.get('reporParams')) {
+
+    }
   }
 
 
