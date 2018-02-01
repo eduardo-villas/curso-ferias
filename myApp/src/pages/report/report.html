@@ -8,46 +8,18 @@
 </ion-header>
 <ion-content padding>
   
-  <!--
-  <ion-row>
-    <ion-col col-4>
-      <ion-item>
-        <ion-img  src="../../assets/imgs/male-profile-picture.png" (click)="changeView()"></ion-img>
+  <ion-card *ngFor="let item of itens">
+    <ion-card-header>
+      <ion-item padding>
+        <ion-icon [name]="item.logo" item-start></ion-icon>
+        <ion-label>{{item.title}}</ion-label>
+        <ion-icon [name]="item.icon" item-end></ion-icon>
       </ion-item>
-    </ion-col>
-    
-    <ion-col col-8>
-      <ion-item>
-        <ion-input type="text" placeholder="Nome"></ion-input>
-      </ion-item>
-    </ion-col>
-    
-  </ion-row>
+    </ion-card-header>
+    <ion-card-content [innerHtml]=item.detail *ngIf="item.showDetail">
+    </ion-card-content>
+  </ion-card>
   
-  <ion-list>
-    <ion-item>
-      
-    </ion-item>
-  </ion-list>
-    
-    <form name="signup">
-      <ion-list>
-        <div class="row">
-          <div class="col">
-            <label class="item item-input">
-              <input placeholder="Identificación" name="identificacion" type="text"  required>
-            </label>
-          </div>
-          <div class="col">
-            <label class="item item-input item-select" name="tipo_id" >
-              <div class="input-label">Tipo de Identificación</div>
-              <select >
-                <option ng-repeat="tipo in defaultTipo" value="tipoid" ng-selected="">opcao</option>
-              </select>
-            </label>
-          </div>
-        </div>
-      </ion-list>
-    </form>
-  -->
+  <button ion-button color="default" (click)="print()">Imprimir</button>
+  
 </ion-content>

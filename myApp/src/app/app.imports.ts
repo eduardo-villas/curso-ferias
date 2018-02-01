@@ -16,12 +16,14 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
 import { BarcodeScanner } from '@ionic-native/barcode-scanner';
 import { HttpClientModule } from '@angular/common/http';
+import { HttpModule } from '@angular/http';
 
 //PROVIDERS
 import { AlertServiceProvider } from '../providers/utils/alert.service';
 import { ToastServiceProvider } from '../providers/utils/toast.service';
 import { AuthServiceProvider } from '../providers/auth-service/auth.service';
 import { UserServiceProvider } from '../providers/user-service/user.service';
+import { ReportServiceProvider } from '../providers/report-service/report.service';
 
 export const MODULES = [
     LoginPageModule, 
@@ -34,7 +36,8 @@ export const MODULES = [
 
 export const NATIVEMODULES = [
     BrowserModule,
-    HttpClientModule, 
+    HttpClientModule,
+    HttpModule, 
     IonicStorageModule.forRoot()
 ];
 
@@ -42,7 +45,8 @@ export const PROVIDERS = [
     ToastServiceProvider,
     AlertServiceProvider,
     AuthServiceProvider,
-    UserServiceProvider
+    UserServiceProvider,
+    ReportServiceProvider
 ];
 
 export const NATIVEPROVIDERS = [

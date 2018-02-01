@@ -23,10 +23,11 @@ export class LoginPage implements OnInit {
     private userService: UserServiceProvider) { }
     
     ngOnInit(): void {
-      this.currentUser = this.userService.getCurrentUser();
-      if (this.currentUser) {
-        this.navCtrl.setRoot('HomePage');
-      }
+      this.userService.getCurrentUser().then( res => {
+         this.currentUser = res;
+         if (res)
+            this.navCtrl.setRoot('HomePage');
+      });
     }
       
     login(loginForm) : void {
@@ -44,7 +45,7 @@ export class LoginPage implements OnInit {
           this.alertService.showError('Erro fatal');      
         }
       );
-      //this.authService.login(loginForm);
+      
     }
     
   }

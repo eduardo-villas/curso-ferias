@@ -33,7 +33,7 @@ export class AuthServiceProvider {
                         this.currentUser = res[0];
                         access = true;
                         localStorage.setItem(TOKEN, 'OK');
-                        this.storage.set(CURRENT_USER, this.currentUser);
+                        this.storage.set(CURRENT_USER, res[0]);
                     } else {
                         access = false;
                     }

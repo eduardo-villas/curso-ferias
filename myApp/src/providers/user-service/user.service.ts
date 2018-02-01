@@ -18,7 +18,7 @@ export class UserServiceProvider {
         return localStorage.getItem(TOKEN);
     }
 
-    public getCurrentUser() : Object {
+    public getCurrentUser() : Promise<any> {
         return this.storage.get(CURRENT_USER);
     }
 
