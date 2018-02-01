@@ -818,13 +818,13 @@ var ReportPage = (function () {
         this.itens = [];
     }
     ReportPage.prototype.ngOnInit = function () {
+        var _this = this;
         var user = this.userService.getCurrentUser().then(function (res) {
-            console.log(res);
+            _this.reportService.getData(5, [1, 2, 3]).then(function (itens) {
+                console.log(itens);
+                _this.itens = itens;
+            }).catch(function (reason) { return _this.alertService.showError('Erro ' + reason); });
         });
-        // this.reportService.getData(5, [1,2,3]).then(itens => {
-        //   console.log(itens);
-        //   this.itens = itens;
-        // }).catch(reason => this.alertService.showError('Erro '+reason));
     };
     ReportPage.prototype.print = function () {
         this.navCtrl.push('PrintPage');
