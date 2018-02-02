@@ -50,7 +50,7 @@ export class ReportPage implements OnInit {
     }
 
     print() : void {
-      this.navCtrl.push('PrintPage');
+      this.navCtrl.push('PrintPage', { reportParams: this.itens });
     }
     
   }

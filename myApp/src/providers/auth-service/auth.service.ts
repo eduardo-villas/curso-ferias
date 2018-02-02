@@ -17,16 +17,24 @@ export class AuthServiceProvider {
     }
 
     public buildToken(credentials): any {
-        const token = btoa(`${credentials.login}:${credentials.senha}`);
+        const token = btoa('mobile:alunos');
         return token;
     }
 
     public login(credentials): Observable<any> {
 
+        const token = this.buildToken(credentials);
+
+        let httpOptions = {
+            headers: new HttpHeaders({
+                'Content-Type': 'application/x-www-form-urlencoded',
+                Authorization: `Basic ${token}`
+            })
+        };
 
         const params = new HttpParams()
-            .set('username', 'usuario')
-            .append('password', 'password')
+            .set('username', credentials.login)
+            .append('password', credentials.senha)
             .append('grant_type', 'password');
 
         return this.http.post(`${URI_BASE}/oauth/token`, params.toString(), httpOptions);
@@ -41,11 +49,10 @@ export class AuthServiceProvider {
 
     public saveAccessData(res): void {
         localStorage.setItem(IS_AUTORIZED, TRUE);
-        this.currentUser = res;
+        this.currentUser = res[CURRENT_USER];
         this.storage.set(CURRENT_USER, res);
-        this.userService.setToken('teste');
+        this.userService.setToken(res[TOKEN]);
     }
-
     getHeader(): Object {
         let credentials = this.currentUser;
         const token = this.buildToken(credentials);

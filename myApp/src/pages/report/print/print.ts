@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 
 import { IonicPage } from 'ionic-angular';
+import { AlertServiceProvider } from '../../../providers/utils/alert.service';
 
 @IonicPage()
 @Component({
@@ -10,9 +11,12 @@ import { IonicPage } from 'ionic-angular';
 })
 export class PrintPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
-    if (navParams.get('reporParams')) {
-
+  constructor(public navCtrl: NavController, 
+    public navParams: NavParams, 
+    private alertService: AlertServiceProvider) {
+    let itens = this.navParams.get('reportParams');
+    if (itens) {
+      this.alertService.showAlert('parametros', JSON.stringify(itens));
     }
   }
 

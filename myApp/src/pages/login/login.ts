@@ -22,7 +22,7 @@ export class LoginPage implements OnInit {
     private alertService: AlertServiceProvider,
     private userService: UserServiceProvider) {
     if (this.authService.isAutorized()) {
-        this.navCtrl.setRoot('HomePage');
+        // this.navCtrl.setRoot('HomePage');
       }
   }
     

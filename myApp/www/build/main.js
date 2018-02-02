@@ -278,7 +278,7 @@ var ReportPageModule = (function () {
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ReportServiceProvider; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_http__ = __webpack_require__(171);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_storage__ = __webpack_require__(41);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_storage__ = __webpack_require__(42);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__utils_constants__ = __webpack_require__(84);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -475,7 +475,7 @@ var AppModule = (function () {
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return HomePage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(10);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_utils_alert_service__ = __webpack_require__(47);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_utils_alert_service__ = __webpack_require__(41);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_auth_service_auth_service__ = __webpack_require__(82);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -610,7 +610,7 @@ var ListPage = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(10);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_auth_service_auth_service__ = __webpack_require__(82);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_utils_alert_service__ = __webpack_require__(47);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_utils_alert_service__ = __webpack_require__(41);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_user_service_user_service__ = __webpack_require__(48);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -634,7 +634,7 @@ var LoginPage = (function () {
         this.userService = userService;
         this.loginForm = { login: "", senha: "" };
         if (this.authService.isAutorized()) {
-            this.navCtrl.setRoot('HomePage');
+            // this.navCtrl.setRoot('HomePage');
         }
     }
     LoginPage.prototype.ngOnInit = function () {
@@ -661,7 +661,7 @@ var LoginPage = (function () {
     };
     LoginPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-login',template:/*ion-inline-start:"D:\eduardo\curso-ferias\myApp\src\pages\login\login.html"*/'<ion-header>\n\n  <ion-navbar>\n\n    <button ion-button menuToggle>\n\n      <ion-icon name="menu"></ion-icon>\n\n    </button>\n\n    <ion-title>Login</ion-title>\n\n  </ion-navbar>\n\n</ion-header>\n\n<ion-content padding>\n\n  \n\n  <ion-row>\n\n    <ion-item no-lines>\n\n      <ion-label>Login</ion-label>\n\n    </ion-item>\n\n    <ion-item>\n\n      <ion-input type="text" placeholder="login" [(ngModel)]="loginForm.login" ></ion-input>\n\n    </ion-item>\n\n  </ion-row>\n\n  <ion-row>\n\n    <ion-item no-lines>\n\n      <ion-label>Senha</ion-label>\n\n    </ion-item>\n\n    <ion-item>\n\n      <ion-input type="text" placeholder="senha" [(ngModel)]="loginForm.senha" ></ion-input>\n\n    </ion-item>\n\n  </ion-row>\n\n\n\n  <button ion-button color="default" (click)="login(loginForm)">login</button>\n\n  \n\n  \n\n</ion-content>'/*ion-inline-end:"D:\eduardo\curso-ferias\myApp\src\pages\login\login.html"*/
+            selector: 'page-login',template:/*ion-inline-start:"D:\eduardo\curso-ferias\myApp\src\pages\login\login.html"*/'<ion-header>\n\n  <ion-navbar>\n\n    <button ion-button menuToggle>\n\n      <ion-icon name="menu"></ion-icon>\n\n    </button>\n\n    <ion-title>Login</ion-title>\n\n  </ion-navbar>\n\n</ion-header>\n\n<ion-content padding>\n\n  \n\n  <ion-row>\n\n    <ion-item no-lines>\n\n      <ion-label>Login</ion-label>\n\n    </ion-item>\n\n    <ion-item>\n\n      <ion-input type="text" placeholder="login" [(ngModel)]="loginForm.login" ></ion-input>\n\n    </ion-item>\n\n  </ion-row>\n\n  <ion-row>\n\n    <ion-item no-lines>\n\n      <ion-label>Senha</ion-label>\n\n    </ion-item>\n\n    <ion-item>\n\n      <ion-input type="password" placeholder="senha" [(ngModel)]="loginForm.senha" ></ion-input>\n\n    </ion-item>\n\n  </ion-row>\n\n\n\n  <button ion-button color="default" (click)="login(loginForm)">login</button>\n\n  \n\n  \n\n</ion-content>'/*ion-inline-end:"D:\eduardo\curso-ferias\myApp\src\pages\login\login.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */],
             __WEBPACK_IMPORTED_MODULE_2__providers_auth_service_auth_service__["a" /* AuthServiceProvider */],
@@ -683,7 +683,7 @@ var LoginPage = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(10);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_camera__ = __webpack_require__(166);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_storage__ = __webpack_require__(41);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_storage__ = __webpack_require__(42);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__profile_model__ = __webpack_require__(282);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__providers_utils_toast_service__ = __webpack_require__(86);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -773,6 +773,7 @@ var Profile = (function () {
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PrintPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(10);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_utils_alert_service__ = __webpack_require__(41);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -784,18 +785,24 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 
 
+
 var PrintPage = (function () {
-    function PrintPage(navCtrl, navParams) {
+    function PrintPage(navCtrl, navParams, alertService) {
         this.navCtrl = navCtrl;
         this.navParams = navParams;
-        if (navParams.get('reporParams')) {
+        this.alertService = alertService;
+        var itens = this.navParams.get('reportParams');
+        if (itens) {
+            this.alertService.showAlert('parametros', JSON.stringify(itens));
         }
     }
     PrintPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
             selector: 'page-print',template:/*ion-inline-start:"D:\eduardo\curso-ferias\myApp\src\pages\report\print\print.html"*/'<ion-header>\n\n  <ion-navbar>\n\n    <button ion-button menuToggle>\n\n      <ion-icon name="menu"></ion-icon>\n\n    </button>\n\n    <ion-title>Print</ion-title>\n\n  </ion-navbar>\n\n</ion-header>\n\n<ion-content padding>\n\n\n\n  \n\n\n\n</ion-content>'/*ion-inline-end:"D:\eduardo\curso-ferias\myApp\src\pages\report\print\print.html"*/
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */]])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */],
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */],
+            __WEBPACK_IMPORTED_MODULE_2__providers_utils_alert_service__["a" /* AlertServiceProvider */]])
     ], PrintPage);
     return PrintPage;
 }());
@@ -812,7 +819,7 @@ var PrintPage = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(10);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_user_service_user_service__ = __webpack_require__(48);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_utils_alert_service__ = __webpack_require__(47);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_utils_alert_service__ = __webpack_require__(41);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_report_service_report_service__ = __webpack_require__(170);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -856,7 +863,7 @@ var ReportPage = (function () {
         }
     };
     ReportPage.prototype.print = function () {
-        this.navCtrl.push('PrintPage');
+        this.navCtrl.push('PrintPage', { reportParams: this.itens });
     };
     ReportPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
@@ -1035,14 +1042,14 @@ var MyApp = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_profile_profile_module__ = __webpack_require__(165);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__pages_scanner_scanner_module__ = __webpack_require__(172);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__angular_platform_browser__ = __webpack_require__(27);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__ionic_storage__ = __webpack_require__(41);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__ionic_storage__ = __webpack_require__(42);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__ionic_native_camera__ = __webpack_require__(166);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__ionic_native_splash_screen__ = __webpack_require__(214);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__ionic_native_status_bar__ = __webpack_require__(213);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__ionic_native_barcode_scanner__ = __webpack_require__(173);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__angular_common_http__ = __webpack_require__(83);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__angular_http__ = __webpack_require__(171);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__providers_utils_alert_service__ = __webpack_require__(47);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__providers_utils_alert_service__ = __webpack_require__(41);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__providers_utils_toast_service__ = __webpack_require__(86);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__providers_auth_service_auth_service__ = __webpack_require__(82);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__providers_user_service_user_service__ = __webpack_require__(48);
@@ -1101,7 +1108,7 @@ var NATIVEPROVIDERS = [
 
 /***/ }),
 
-/***/ 47:
+/***/ 41:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1187,7 +1194,7 @@ var AlertServiceProvider = (function () {
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return UserServiceProvider; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__ionic_storage__ = __webpack_require__(41);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__ionic_storage__ = __webpack_require__(42);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__utils_constants__ = __webpack_require__(84);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -1232,7 +1239,7 @@ var UserServiceProvider = (function () {
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AuthServiceProvider; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_common_http__ = __webpack_require__(83);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_storage__ = __webpack_require__(41);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_storage__ = __webpack_require__(42);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__utils_constants__ = __webpack_require__(84);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__user_service_user_service__ = __webpack_require__(48);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -1257,13 +1264,20 @@ var AuthServiceProvider = (function () {
         this.userService = userService;
     }
     AuthServiceProvider.prototype.buildToken = function (credentials) {
-        var token = btoa(credentials.login + ":" + credentials.senha);
+        var token = btoa('mobile:alunos');
         return token;
     };
     AuthServiceProvider.prototype.login = function (credentials) {
+        var token = this.buildToken(credentials);
+        var httpOptions = {
+            headers: new __WEBPACK_IMPORTED_MODULE_0__angular_common_http__["c" /* HttpHeaders */]({
+                'Content-Type': 'application/x-www-form-urlencoded',
+                Authorization: "Basic " + token
+            })
+        };
         var params = new __WEBPACK_IMPORTED_MODULE_0__angular_common_http__["d" /* HttpParams */]()
-            .set('username', 'usuario')
-            .append('password', 'password')
+            .set('username', credentials.login)
+            .append('password', credentials.senha)
             .append('grant_type', 'password');
         return this.http.post(__WEBPACK_IMPORTED_MODULE_3__utils_constants__["e" /* URI_BASE */] + "/oauth/token", params.toString(), httpOptions);
     };
@@ -1274,9 +1288,9 @@ var AuthServiceProvider = (function () {
     };
     AuthServiceProvider.prototype.saveAccessData = function (res) {
         localStorage.setItem(__WEBPACK_IMPORTED_MODULE_3__utils_constants__["b" /* IS_AUTORIZED */], __WEBPACK_IMPORTED_MODULE_3__utils_constants__["d" /* TRUE */]);
-        this.currentUser = res;
+        this.currentUser = res[__WEBPACK_IMPORTED_MODULE_3__utils_constants__["a" /* CURRENT_USER */]];
         this.storage.set(__WEBPACK_IMPORTED_MODULE_3__utils_constants__["a" /* CURRENT_USER */], res);
-        this.userService.setToken('teste');
+        this.userService.setToken(res[__WEBPACK_IMPORTED_MODULE_3__utils_constants__["c" /* TOKEN */]]);
     };
     AuthServiceProvider.prototype.getHeader = function () {
         var credentials = this.currentUser;
@@ -1291,10 +1305,9 @@ var AuthServiceProvider = (function () {
     };
     AuthServiceProvider = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["A" /* Injectable */])(),
-        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_0__angular_common_http__["a" /* HttpClient */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_common_http__["a" /* HttpClient */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__ionic_storage__["b" /* Storage */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__ionic_storage__["b" /* Storage */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_4__user_service_user_service__["a" /* UserServiceProvider */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4__user_service_user_service__["a" /* UserServiceProvider */]) === "function" && _c || Object])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_0__angular_common_http__["a" /* HttpClient */], __WEBPACK_IMPORTED_MODULE_2__ionic_storage__["b" /* Storage */], __WEBPACK_IMPORTED_MODULE_4__user_service_user_service__["a" /* UserServiceProvider */]])
     ], AuthServiceProvider);
     return AuthServiceProvider;
-    var _a, _b, _c;
 }());
 
 //# sourceMappingURL=auth.service.js.map
@@ -1310,7 +1323,7 @@ var AuthServiceProvider = (function () {
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "e", function() { return URI_BASE; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return IS_AUTORIZED; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "d", function() { return TRUE; });
-var TOKEN = 'token';
+var TOKEN = 'access_token';
 var CURRENT_USER = 'currentUser';
 var URI_BASE = 'https://curso-ferias-matera.herokuapp.com';
 var IS_AUTORIZED = 'IS_AUTORIZED';
